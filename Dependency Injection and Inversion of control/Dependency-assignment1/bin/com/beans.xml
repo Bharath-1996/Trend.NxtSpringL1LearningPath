@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:context="http://www.springframework.org/schema/context"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+ 
+    <bean id="student1" class="com.Student">
+    <property name="studentId" value="517"></property>
+    <property name="studentName" value="Bharath"></property>
+	<property name="studentTest">
+	    	<list>
+	     		 <ref local="t1"></ref>
+	      	</list>
+	 </property>
+     </bean>
+ 	 <bean id="student2" class="com.Student">
+	 <property name="studentId" value="546"></property>
+     <property name="studentName" value="Srikanth"></property>
+     <property name="studentTest">
+	      <list>
+	       <ref local="t1"></ref>
+	       <ref local="t2"></ref>
+	      </list>
+   
+     </property>
+     </bean>
+     <bean id="t1" class="com.Test">
+     <property name="testId" value="T1"></property>
+      <property name="testName" value="Maths"></property>
+       <property name="testMarks" value="80"></property>
+     </bean>
+       <bean id="t2" class="com.Test">
+     <property name="testId" value="T2"></property>
+      <property name="testName" value="English"></property>
+       <property name="testMarks" value="55"></property>
+     </bean>
+   
+</beans>

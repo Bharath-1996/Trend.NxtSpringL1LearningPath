@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+  
+   <bean id="player1" class="com.Player">
+       <property name="playerId" value="p1"></property>
+        <property name="playerName" value="Bharath"></property>
+       
+      </bean>
+        <bean id="player2" class="com.Player">
+       <property name="playerId" value="p2"></property>
+        <property name="playerName" value="Srikanth"></property>
+   
+      </bean>
+        <bean id="player3" class="com.Player">
+       <property name="playerId" value="p3"></property>
+        <property name="playerName" value="Sharath"></property>
+       
+      </bean>
+        <bean id="player4" class="com.Player">
+       <property name="playerId" value="p4"></property>
+        <property name="playerName" value="Sandeep"></property>
+        
+      </bean>
+        <bean id="player5" class="com.Player">
+       <property name="playerId" value="p5"></property>
+        <property name="playerName" value="Raju"></property>
+       
+      </bean>
+       
+       <bean id="country1" class="com.Country">
+       <property name="countryId" value="C1"></property>
+        <property name="countryName" value="India"></property>
+         <property name="playerslist">
+      
+	           <list >
+			        <ref bean="player1"/>
+			         <ref bean="player2"/>
+			          <ref bean="player3"/>
+	         
+	          </list>
+      
+         </property>
+         
+    </bean>
+      
+         <bean id="country2" class="com.Country">
+       <property name="countryId" value="C2"></property>
+        <property name="countryName" value="England"></property> 
+        <property name="playerslist">
+		        <list>
+				      <ref local="player4"></ref>
+				        <ref local="player5"></ref>
+		        </list>
+        </property>
+        </bean>
+       
+       </beans>

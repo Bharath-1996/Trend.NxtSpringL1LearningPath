@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+-<beans xsi:schemaLocation=" http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.springframework.org/schema/beans">
+
+<!-- bean definitions here -->
+
+
+
+-<bean class="com.Movie" id="movieid">
+
+<property value="M001" name="movieId"/>
+
+<property value="ENPT" name="movieName"/>
+
+<property value="Dhanush" name="movieActor"/>
+
+</bean>
+
+</beans>
